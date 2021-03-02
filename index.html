@@ -76,7 +76,8 @@ li.dropdown {
 }
 
 body {
-  background-color: lightblue;
+  /*background-color: lightblue; */
+  background-image: url("yellow_rock.gif");
 }
 
 /* Create 2 equal columns that floats next to each other */
@@ -106,39 +107,64 @@ body {
 
 <div class="header">
   <h2>C# Libraries</h2>
-  /*<p> C# Libraries .</p>  */
+  
 </div>
 
 <ul>
-  <li><a href="#home">Home</a></li>
+  <li><a href="index.html">Home</a></li>
   <li><a href="#news">News</a></li>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <a href="javascript:void(0)" class="dropbtn">Features</a>
     <div class="dropdown-content">
-      <a href="DockerLibr/DockerLibr.html">DockerLibr</a>
-	  <a href="https://github.com/guihen01/DockerLibr">DockerLibr (on Github.org)</a>
-      <a href="RestApi-JIRA-Lib/RestApi-JIRA-Lib.html">RestApi-JIRA-Lib</a>
-      <a href="https://github.com/guihen01/RestApi-JIRA-Lib">RestApi-JIRA-Lib (on Github.org)</a>
+	  <a href="https://www.nuget.org/profiles/HenriGuillot">Code on Nuget.org</a>
+      <a href="https://github.com/guihen01/DockerLibr">DockerLibr (on Github.com)</a>
+      <a href="https://github.com/guihen01/RestApi-JIRA-Lib">RestApi-JIRA-Lib (on Github.com)</a>
     </div>
   </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Docs</a>
+    <div class="dropdown-content">
+	  <a href="DockerLibr/DockerLibr.html">DockerLibr</a>
+	  <a href="RestApi-JIRA-Lib/RestApi-JIRA-Lib.html">RestApi-JIRA-Lib</a>
+    </div>
+  </li>
+  <li style="float:right"><a class="active" href="About.html">About</a></li>
 </ul>
 
 <div class="row">
   <div class="column">
-    <h2>RestAPI-JIRA-Lib</h2>
+    <a href='https://ci.appveyor.com/project/guihen01/restapi-jira-lib'><img src="https://ci.appveyor.com/api/projects/status/aulan7yl97p39r70?svg=true" referrerpolicy="no-referrer" alt="Build status"></a>
+    <a href='https://www.nuget.org/packages/RestApi-JIRA-Lib/'><img src="https://img.shields.io/nuget/v/RestApi-JIRA-Lib.svg" referrerpolicy="no-referrer" alt="NuGet"></a>
+	<h2>RestAPI-JIRA-Lib</h2>
     <p>routines (methods) in a DLL library, to be used in C# code.</p>
 	<p>routines using JIRA REST API  to get or post  details on JIRA server  & groups, users, or Issues . results are printed on console and/or  writen in json formated files and/or plain text formated files,  and for some, in  Excel files.</p>
 	<p>Doc at : https://github.com/guihen01/RestApi-JIRA-Lib/blob/main/README.md</p>
-	<a href="RestApi-JIRA-Lib.html">RestApi-JIRA-Lib</a>
+	
+	
+	<a href='https://www.nuget.org/packages/FFTlib/'><img src="https://img.shields.io/nuget/v/FFTlib.svg" referrerpolicy="no-referrer" alt="NuGet"></a>
+	<h2>FFTLib</h2>
+	<p>routines (methods) in a DLL library, to be used in C# code.</p>
+	<p>Calcul de Transformée de Fourier Discrète et de la Transformée de Fourier rapide Fast fourier Transform  (FFT) & Discrete Fourier Transform (DFT)
+       ensemble de routines</p>
   </div>
   
   <div class="column">
-    <h2>Column2</h2>
-    <p> </p>
-</div>    
+    <a href='https://www.nuget.org/packages/DockerLibr/'><img src="https://img.shields.io/nuget/v/DockerLibr.svg" referrerpolicy="no-referrer" alt="NuGet"></a>
+    <a href='https://www.fuget.org/packages/DockerLibr'><img src="https://www.fuget.org/packages/DockerLibr/badge.svg" referrerpolicy="no-referrer" alt="DockerLibr on fuget.org"></a>
+	<h2>DockerLibr</h2>
+	<p>routines (methods) in a DLL library, to be used in C# code.</p>
+    <p>Library of methods working on Docker Hub . Methods get and parse Docker containers & images in Docker Hub repository or on local or remote host server or computers.
+     Doc & repository at : https://github.com/guihen01/DockerLibr </p>
+		 
+	 <a href='https://www.nuget.org/packages/GetHttpResponse/'><img src="https://img.shields.io/nuget/v/GetHttpResponse.svg" referrerpolicy="no-referrer" alt="NuGet"></a>
+	 <h2>GetHttpResonse</h2>
+	<p>routines (method) in a DLL library, to be used in C# code.</p>
+	<p>Send demand of authorization to a server , to get or post request via Http Rest API. Doc & repository at https://github.com/guihen01/GetHttpResponse </p>
+	
+  </div>    
 
 <h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+<p>Hover over the "Dropdown" link to see the dropdown menu. </p>
 
 </body>
 </html>

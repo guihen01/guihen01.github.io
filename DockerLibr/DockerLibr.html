@@ -140,25 +140,41 @@ body {
   <div class="column">
   
   <h2>DockerLibr</h2>
-  
-<p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockerPullCount.md'>DockerPullCount</a></p>  
-      <p>Returns the pull count number of the images tags </p>
-	  
-<p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockGetTagsOb%20%26%20DockGetTags.md'>DockGetTagsOb & DockGetTags</a></p>  
-      <p>Returns all tags or specific tag of a repository: ( Docker Hub repository) </p>
-	  
-<p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockContList.md'>DockContList</a></p>
-     <p>returns the detail list of containers hosted on your local or remote host server or computer </p>  
-	 
-<p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockImageList.md'>DockImageList</a>     </p>
-     <p>Returns the list of local or remote images , hosted on local or remote computers </p>
-	 
- <p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockContRunning.md'>DockContRunning</a>     </p>
-     <p>Returns the running containers informations  </p>
-	
+  <h2>Routines inside the Library : </h2>
+	<p> </p>
+<ol start='' >
+<li>DockerPullCount     : Returns the number of pulls on a given repository</li>
+<li>DockerREpInfos      : Returns the details informations on the repository (idname/repname)</li>
+<li>DockerWrToJson      : Write informations obtained from Docker Hub to a file (format json) </li>
+<li>DockerWrToTxt       : Write informations obtained from Docker Hub to a file (format txt)</li>
+<li>GetHttpRep          : Simple Get Http Request with no authorization needed</li>
+<li>DockGetTagsOb       : Returns all tags or specific tag of a Docker Hub repository  ( results as  json string )</li>
+<li>DockGetTags         : Returns all tags or specific tag of a Docker Hub repository  ( results as  json string formated as text)</li>
+<li>DockContList        : List docker containers – Get the Docker container list with details (results as  json string)</li>
+<li>DockImageList       : List images on local or remote host computer or server</li>
+<li>DockContPaused      : List all paused containers</li>
+<li>DockContRunning     : List all containers running</li>
+
+</ol>
 	
   </div>
   
+  <div class="column">
+     <p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockerPullCount.md'>DockerPullCount</a></p>  
+        <p>Returns the pull count number of the images tags </p>
+	  
+    <p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockGetTagsOb%20%26%20DockGetTags.md'>DockGetTagsOb & DockGetTags</a></p>  
+       <p>Returns all tags or specific tag of a repository: ( Docker Hub repository) </p>
+	  
+    <p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockContList.md'>DockContList</a></p>
+      <p>returns the detail list of containers hosted on your local or remote host server or computer </p>  
+	 
+    <p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockImageList.md'>DockImageList</a>     </p>
+     < p>Returns the list of local or remote images , hosted on local or remote computers </p>
+	 
+    <p><a href='https://github.com/guihen01/DockerLibr/blob/main/Doc/DockContRunning.md'>DockContRunning</a>     </p>
+       <p>Returns the running containers informations  </p>
+ 
  >
 
 </body>

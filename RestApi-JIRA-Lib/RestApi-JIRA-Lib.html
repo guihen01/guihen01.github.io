@@ -139,17 +139,53 @@ body {
 <div class="row">
   <div class="column">
   
-  <h2>RestAPI-JIRA-Lib</h2>
+  <h2>RestAPI-JIRA-Lib (JiraLib)</h2>
   
-<p><a href='Methods/DockerPullCount'>DockerPullCount</a></p>  
-      <p>Returns the pull count number of the images tags </p>
-<p><a href='DockerWrToJson'>DockerWrToJson</a></p>
-     <p>Write informations obtained from Docker Hub to a file (format json) </p>  
-<p><a href='Methods/DockerPullCount'>DockerREpInfos</a>     </p>
-     <p>Returns the details informations on the repository (idname/repname) </p>
- 
+  <h2>Routines inside the Library : </h2>
+<ol start='' >
+<li>GetAllGroups  : Get a list of all Jira groups and save the list in 2 files : List-groups.json &amp; List-groups.txt</li>
+<li>GetUSersFromGroup() : Get the list of all user&#39;s username belonging to a group and save the list in 2 files : List-users.json &amp; List-users.txt . Print the list to the console</li>
+<li>GetUsernameFromGroup(username, password, urlbase, group) :
+Get the list of all user&#39;s username belonging to a group and save the list in 2 files : List-username-from-group-{0}.json &amp; List-username-from-group-{0}.txt . return a list of group&#39;s username as a string array </li>
+<li>Post1</li>
+<li>ConverJsontoString</li>
+<li>PickItems()   : create 2 files  : List-items.json &amp; List-items.txt  which include the groups and/or names and/or emailadresses with string matching</li>
+<li>Find-Users() : Returns a list of users that match the search string.(store the results in 2 files : List-users.json &amp; List-users.txt)</li>
+<li>JsontJObjectToString() : read a json formated file (type JObject) and convert to a text (string) formated file </li>
+<li>JsontJTokenToString() : read a json formated file (type JToken) and convert to a text (string) formated file </li>
+<li>JsontArrayToString() : read a json from a file (type JArray) and convert to a text (string) formated file </li>
+<li>GetServerInfo() : Get informations on Jira server</li>
+<li>GetAllProjects() : Get all Jira projects and save the list in 2 files : List-projects.json &amp; List-projects.txt</li>
+<li>GetAllUsers() :  Get All Jira user&#39;s username (from all groups)  and store the list for each group  in 2 files : List-all-users-from-group.json &amp; List-all-users-from-group.txt ( store it in the current directory). Returns a list of objects (objects of type Group) List</li>
+<li>GetAllUsersToXL() : Get the list of all Jira users and groups and store the list for each group in 2 files : List-username-from-group-...json &amp; List-username-from-group-...txt &amp; write result to an Excel file (List-ALl-UsersGroups.xlsx). Returns a list of objects (objects of type Group) List</li>
+<li>GetUsersDetailFromGroup() :  returns a list of users details for a group. As objects (objects of type Group) List<GroupInfo> &amp; write result to file (Json style) : List-Details-from-group-{0}.txt&quot; &amp; write result to file (text file)  : List-accounts-from-group-{0}.txt&quot; Details are : username, full name, email, group , active user or not </li>
+<li>GetAllUsersDetail() : get all users details from all JIRA groups. GEt results as  json file and Text file and as an array of Objects list : 
+ &lt;List<GroupInfo>[]</li>
+<li>GetHttpResponse() :  include try catch methods to get errors when using http protocol services for geting or posting Rest Api Demands to JIRA server.</li>
+<li>GetAllUsersDetailToXL() : Execute a GET http request on a Jira server with Rest API, to get all users details from all JIRA groups 
+. Store all users&#39;s details in a file : List-ALl-UsersGroups.xlsx in the current directory
+. Return an array of List objects which contains all JIRA users details from all JIRA groups</li>
+<li>GetAllIssuesPj() Get a list of all issues in a project. Write list to a Excel file with list of all issues status, assignee,resolution, ...... </li>
+<li>JiraPostRequest() This simple method allows to make a post rest api request to a jira server . write results to console &amp; and to files located in the current directory .:  Response.txt  &amp; Response.json. Parameters to give is a json file , containing your post request</li>
+<li>GetProjectIssues() : Get all issues details in a project. Get it from the json JObject Ob parameter. It parses and anlizes the JObject object &amp; returns an array of all Issues ( type of array : IssueInfos[]) inside the project.:  GetProjectIssues(string projectname, JObject Ob, int NumberOfIssues)</li>
+<li>GetUnrIssuesPj() : returns a list of  all non resolved issues in a project. Write them in a Excel file </li>
+<li>CreateGroup() : Create a Jira group</li>
+
+</ol>
 	
   </div>
+  
+  <div class="column">
+     <p><a href='https://github.com/guihen01/RestApi-JIRA-Lib/blob/main/Doc/Pickitem.md'>PickItem</a></p>  
+          <p>Returns a list of groups and/or names and/or emailadresses with string matching </p>
+     <p><a href='https://github.com/guihen01/RestApi-JIRA-Lib/blob/main/Doc/GetAllUsersToXL.md'>GetAllUsersToXL</a></p>
+          <p>(Jira users list) Export to a Excel file, the list of all groups and of all the users belonging to each Jira group </p>
+		  
+    <p><a href='https://github.com/guihen01/RestApi-JIRA-Lib/blob/main/Doc/GetAllIssuesPj.md'> GetAllIssuesPj</a>     </p>
+          <p>Returns a list of all issues in a project. Write list to a Excel file with list of all issues status, assignee,resolution </p>
+  
+    <p><a href='https://github.com/guihen01/RestApi-JIRA-Lib/blob/main/Doc/GetUnrIssuesPj.md'> GetUnrIssuesPj</a>     </p>
+          <p>Returns a list of all unresolved issues in a project. Write list to a Excel file with list of all issues status, assignee,resolution </p>
   
  >
 
